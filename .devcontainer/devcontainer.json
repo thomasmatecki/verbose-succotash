@@ -49,6 +49,9 @@
 			"onAutoForward": "notify"
 		}
 	},
+	"runArgs": [
+		"--volume=/var/run/docker.sock:/var/run/docker.sock",
+	],
 	// Use 'otherPortsAttributes' to configure any ports that aren't configured using 'portsAttributes'.
 	// "otherPortsAttributes": {
 	// 		"onAutoForward": "silent"
