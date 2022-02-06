@@ -28,6 +28,7 @@ bld/
 bazel-out/
 bazel-bin/
 bazel-testlogs/
+bazel-verbose-succotash/
 .vscode/
 
 
