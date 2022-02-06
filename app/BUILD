@@ -1,5 +1,5 @@
 load("@app//:requirements.bzl", "entry_point", "requirement")
-load("@io_bazel_rules_docker//python:image.bzl", "py_image")
+load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
 
 alias(
     name = "uvicorn",
@@ -13,22 +13,34 @@ py_binary(
         "main.py",
     ],
     main = "entry.py",
-    args = ["main:app"],
     deps = [
         requirement("fastapi"),
         requirement("uvicorn"),
     ],
 )
 
-py_image(
+py_test(
+    name = "test",
+    srcs = [
+        "test.py",
+        "entry.py",
+        "main.py",
+    ],
+    deps = [
+        ":api",
+        requirement("pytest"),
+        requirement("curio")
+    ],
+)
+
+py3_image(
     name = "docker_api",
     srcs = [
         "entry.py",
         "main.py",
     ],
     main = "entry.py",
-    args = ["main:app"],
-    deps = [
+    layers = [
         requirement("fastapi"),
         requirement("uvicorn"),
     ],

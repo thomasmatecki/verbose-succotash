@@ -25,7 +25,7 @@ bld/
 [Ll]og/
 
 
-bazel-out/
+bazel\-out/
 bazel-bin/
 bazel-testlogs/
 
