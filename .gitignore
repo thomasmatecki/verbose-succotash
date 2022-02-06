@@ -25,10 +25,10 @@ bld/
 [Ll]og/
 
 
-bazel-out/
-bazel-bin/
-bazel-testlogs/
-bazel-verbose-succotash/
+bazel-out
+bazel-bin
+bazel-testlogs
+bazel-verbose-succotash
 .vscode/
 
 
