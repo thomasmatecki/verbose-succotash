@@ -25,9 +25,10 @@ bld/
 [Ll]og/
 
 
-bazel\-out/
+bazel-out/
 bazel-bin/
 bazel-testlogs/
+.vscode/
 
 
 # Visual Studio 2015/2017 cache/options directory
