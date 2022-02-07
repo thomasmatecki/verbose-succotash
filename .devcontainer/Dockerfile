@@ -31,4 +31,4 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN npm install -g @bazel/bazelisk 
 RUN npm install -g @bazel/buildifier
 RUN curl -fsSL https://get.docker.com | sh
-RUN pip3 install docker-compose
+RUN pip3 install pip-tools docker-compose
